@@ -1,0 +1,5 @@
+LIBRARY      "mfdcca"
+DESCRIPTION  'R call to C Windows Dynamic Link Library MFDFA'
+
+EXPORTS
+  mfdcca
