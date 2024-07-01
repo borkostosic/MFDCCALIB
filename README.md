@@ -3,7 +3,7 @@
 ## Introduction
 This code repository presents a library implementing a set of novel algorithms proposed to deal with negative cross-covariance among two series 
 in the scope of Multifractal detrended cross-correlation analysis
-[[1]](https://doi.org/xxx),
+[[1]](https://arxiv.org/abs/2406.19406),
 together with
 three existing algorithms for MFDCCA found in the literature.
 
@@ -18,7 +18,7 @@ The library exposes a single function that computes the multifractal spectrum. T
 ```
 double calc_mfdcca(int dcca_version, double minq, double maxq, double dq);
 ```
-where different MFDCCA versions are defined as (see [[1]](https://doi.org/xxx))
+where different MFDCCA versions are defined as (see [[1]](https://arxiv.org/abs/2406.19406))
 
 ```
 #define MFDXA	1	// Original MF-DXA W.-X. Zhou, Phys. Rev. E 77, 066211 (2008).
@@ -67,10 +67,10 @@ The red curves correspond to the average of the MFDFA theoretical curves for the
 If you use this work in academic research, citating the following reference would be appreciated:
 
 ```
-@software{borkostosic2024MFDFA,
+@software{borkostosic2024MFDCCALIB,
   author = {Stosic, Borko},
-  title = {Multifractal detrended fluctuation analysis software},
-  url = {https://github.com/borkostosic/mfdfa},
+  title = {Multifractal detrended cross-correlation analysis software},
+  url = {https://github.com/borkostosic/mfdccalib},
   version = {1.0.0},
   year = {2024},
 }
