@@ -59,7 +59,7 @@ are exposed as globals in the ```mfdccaa.h``` header.
 ## Results
 An example of application of the original MF-DXA algorithm for the Binomial multifractal model [[2]](https://doi.org/10.1016/S0378-4371(02)01383-3), is shown below for two sequences of 2^20=1048576 numbers each, for p=0.3 and p=0.4, included under ```data/``` 
 
-<img width="" alt="" src="./Fig1c.png">
+<img width="" alt="" src="./data/Fig1c.png">
 
 The red curves correspond to the average of the MFDFA theoretical curves for the two series.
 
