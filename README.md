@@ -3,7 +3,8 @@
 ## Introduction
 This code repository presents a library implementing a set of novel algorithms proposed to deal with negative cross-covariance among two series 
 in the scope of Multifractal detrended cross-correlation analysis
-[[1]](https://arxiv.org/abs/2406.19406),
+[[1] https://doi.org/10.1016/j.physa.2025.130971;](https://doi.org/10.1016/j.physa.2025.130971)
+[https://arxiv.org/abs/2406.19406](https://arxiv.org/abs/2406.19406),
 together with
 three existing algorithms for MFDCCA found in the literature.
 
@@ -18,20 +19,20 @@ The library exposes a single function that computes the multifractal spectrum. T
 ```
 double calc_mfdcca(int dcca_version, double minq, double maxq, double dq);
 ```
-where different MFDCCA versions are defined as (see [[1]](https://arxiv.org/abs/2406.19406))
+where different MFDCCA versions are defined as (see [[1] https://doi.org/10.1016/j.physa.2025.130971](https://doi.org/10.1016/j.physa.2025.130971))
 
 ```
 #define MFDXA	1	// Original MF-DXA W.-X. Zhou, Phys. Rev. E 77, 066211 (2008).
-#define ABS	2	// MF-DXA with absolute values of fluctuation products
+#define ABS		2	// MF-DXA with absolute values of fluctuation products
 #define MFCCA	3	// MFCCA Phys. Rev. E 89, 023305
-#define PS	4	// Plus sum
-#define MS	5	// Minus sum
-#define PB	6	// Plus Box
-#define MB	7	// Minus box
-#define PP	8	// Plus plus
-#define PM	9	// Plus minus
-#define MP	10	// Minus plus
-#define MM	11	// Minus minus
+#define PS		4	// Plus sum
+#define MS		5	// Minus sum
+#define PB		6	// Plus Box
+#define MB		7	// Minus box
+#define PP		8	// Plus plus
+#define PM		9	// Plus minus
+#define MP		10	// Minus plus
+#define MM		11	// Minus minus
 ```
 and  ```qmin, qmax, dq``` represent the scaling parameter range
 
@@ -57,7 +58,7 @@ double H[MAXQ], tau[MAXQ], alpha[MAXQ], f[MAXQ];
 are exposed as globals in the ```mfdccaa.h``` header.
 
 ## Results
-An example of application of the original MF-DXA algorithm for the Binomial multifractal model [[2]](https://doi.org/10.1016/S0378-4371(02)01383-3), is shown below for two sequences of 2^20=1048576 numbers each, for p=0.3 and p=0.4, included under ```data/``` 
+An example of application of the original MF-DXA algorithm for the Binomial multifractal model [[2] https://doi.org/10.1016/S0378-4371(02)01383-3](https://doi.org/10.1016/S0378-4371(02)01383-3), is shown below for two sequences of 2^20=1048576 numbers each, for p=0.3 and p=0.4, included under ```data/``` 
 
 <img width="" alt="" src="./data/Fig1c.png">
 
@@ -67,12 +68,17 @@ The red curves correspond to the average of the MFDFA theoretical curves for the
 If you use this work in academic research, citating the following reference would be appreciated:
 
 ```
-@software{borkostosic2024MFDCCALIB,
-  author = {Stosic, Borko},
-  title = {Multifractal detrended cross-correlation analysis software},
-  url = {https://github.com/borkostosic/mfdccalib},
-  version = {1.0.0},
-  year = {2024},
+@article{STOSIC2025130971,
+title = {Dissecting multifractal detrended cross-correlation analysis},
+journal = {Physica A: Statistical Mechanics and its Applications},
+volume = {678},
+pages = {130971},
+year = {2025},
+issn = {0378-4371},
+doi = {https://doi.org/10.1016/j.physa.2025.130971},
+url = {https://www.sciencedirect.com/science/article/pii/S0378437125006235},
+author = {Borko Stosic and Tatijana Stosic},
+keywords = {MFDCCA, MF-DXA, MFCCA, Binomial multifractal model, Sugar-ethanol price},
 }
 ```
 
